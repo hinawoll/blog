@@ -1,0 +1,226 @@
+@charset "UTF-8";
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #fff;
+  z-index: 1; }
+  #header .logo {
+    padding: 20px 16px; }
+  #header .nav {
+    background-color: #333; }
+    @media (max-width: 768px) {
+      #header .nav {
+        overflow-x: scroll; } }
+    #header .nav .list {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px; }
+      #header .nav .list li {
+        padding-right: 60px;
+        /*marginだとスクロールした時に最後のli要素が変になる*/ }
+        #header .nav .list li a {
+          color: #fff; }
+
+main {
+  /*.readmore{
+    position: relative;
+    padding-bottom: 1px;
+    &::after{
+     content: '';
+     position: absolute;
+     height: 1px;
+     width: 100%;
+     left: 0;
+     bottom: 0;
+     background: #333;
+     transition: all 200ms ease;
+    }
+    &:hover{
+     &::after{
+     opacity: 0;
+     transform: translateY(3px);
+     }
+   }
+  }*/ }
+  main .readmore {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    text-decoration: none; }
+    main .readmore::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #333;
+      transform: translate(-100%, 0);
+      transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+      content: ""; }
+    main .readmore:hover::after {
+      transform: translate(0, 0); }
+  main .link {
+    text-align: center; }
+  main .wrapper .pickup {
+    margin: 40px 0;
+    padding-top: 110px; }
+    main .wrapper .pickup .list {
+      display: flex;
+      justify-content: space-between; }
+      @media (max-width: 768px) {
+        main .wrapper .pickup .list {
+          flex-direction: column; } }
+      main .wrapper .pickup .list li {
+        width: 32%; }
+        @media (max-width: 768px) {
+          main .wrapper .pickup .list li {
+            width: 100%;
+            margin-bottom: 30px; } }
+        main .wrapper .pickup .list li .text {
+          margin: 16px 0;
+          font-weight: bold;
+          font-size: 1rem; }
+  main .wrapper .main-flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 0 130px; }
+    @media (max-width: 768px) {
+      main .wrapper .main-flex {
+        flex-direction: column; } }
+    main .wrapper .main-flex .main-left {
+      width: 65%; }
+      @media (max-width: 768px) {
+        main .wrapper .main-flex .main-left {
+          width: 100%; } }
+      main .wrapper .main-flex .main-left .column {
+        margin-bottom: 80px; }
+      main .wrapper .main-flex .main-left .title {
+        font-size: 1.5rem;
+        margin-bottom: 15px; }
+      main .wrapper .main-flex .main-left .date {
+        margin-right: 15px; }
+      main .wrapper .main-flex .main-left .img {
+        margin: 10px 0; }
+      main .wrapper .main-flex .main-left .text {
+        padding: 10px 40px 30px;
+        font-size: 1rem; }
+    main .wrapper .main-flex .main-right {
+      width: 31%; }
+      @media (max-width: 768px) {
+        main .wrapper .main-flex .main-right {
+          width: 100%; } }
+      main .wrapper .main-flex .main-right .title {
+        margin-bottom: 30px;
+        font-size: 1.125rem;
+        font-weight: bold;
+        text-align: center; }
+      main .wrapper .main-flex .main-right .text {
+        text-align: left; }
+      main .wrapper .main-flex .main-right .profile {
+        text-align: center;
+        margin-bottom: 60px; }
+        main .wrapper .main-flex .main-right .profile img {
+          width: 35%;
+          border-radius: 50%; }
+        main .wrapper .main-flex .main-right .profile .title {
+          margin-top: 30px; }
+      main .wrapper .main-flex .main-right .ranking {
+        margin-bottom: 60px; }
+        main .wrapper .main-flex .main-right .ranking .ranking-list li {
+          margin-bottom: 30px; }
+          main .wrapper .main-flex .main-right .ranking .ranking-list li .text {
+            margin-top: 10px; }
+      main .wrapper .main-flex .main-right .archive .list li {
+        padding: 20px;
+        border-top: solid 1px #777; }
+      main .wrapper .main-flex .main-right .archive .list li:last-child {
+        border-bottom: solid 1px #777; }
+
+.footer {
+  background-color: #f7f7f7;
+  padding-bottom: 10px; }
+  .footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 16px;
+    margin-bottom: 10px; }
+    @media (max-width: 768px) {
+      .footer .wrapper {
+        flex-direction: column; } }
+    .footer .wrapper .content {
+      width: 30%; }
+      @media (max-width: 768px) {
+        .footer .wrapper .content {
+          width: 100%; } }
+    .footer .wrapper .title {
+      font-size: 1.125rem;
+      margin-bottom: 30px; }
+    @media (max-width: 768px) {
+      .footer .wrapper .left {
+        margin-bottom: 30px; } }
+    .footer .wrapper .left .list {
+      margin: 20px 0; }
+      .footer .wrapper .left .list li {
+        margin-bottom: 5px; }
+        .footer .wrapper .left .list li a {
+          position: relative;
+          padding-left: 12px; }
+        .footer .wrapper .left .list li a::before {
+          content: '';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 6px 0 6px 8px;
+          border-color: transparent transparent transparent #333;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -6px; }
+    @media (max-width: 768px) {
+      .footer .wrapper .middle {
+        margin-bottom: 30px; } }
+    .footer .wrapper .middle .list li {
+      padding: 15px;
+      border-top: solid 1px #777; }
+    .footer .wrapper .middle .list li:last-child {
+      border-bottom: solid 1px #777; }
+  .footer .copy {
+    text-align: center;
+    font-size: 0.8rem; }
+    @media (max-width: 768px) {
+      .footer .copy {
+        margin-top: 30px; } }
+
+html {
+  font-size: 100%; }
+
+body {
+  font-family: Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 0.875rem;
+  color: #333; }
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: #333; }
+
+a:hover {
+  opacity: 0.8; }
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  /*←画像の下に隙間ができないように*/ }
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px; }
+
+li {
+  list-style: none; }
+
+/*# sourceMappingURL=index.css.map */
